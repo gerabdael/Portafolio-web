@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="/Css/main.css">
+    <meta name="viewport" content="width=device-width">
+     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <title></title>
+</head>
+
+<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <div class="topnav" id="myTopnav" >
+        <a class="active" href="#"><i class="fa fa-fw fa-home"></i></a>
+        <a href="#"><i class="fa fa-medium"></i> Manga</a>
+        <a href="#"><i class="fas fa-mask"></i>Comics</a>
+        <a href="#"><i class="fa fa-book"></i>Libros</a>
+        <a href="#"><i class="fas fa-jedi"></i>Figuras</a>
+        
+       
+        <div class="Car">
+            <a href="#"><i class="fa fa-fw fa-shopping-cart"></i> </a>
+        </div>
+        <form class="example" action="/action_page.php" style="margin:auto;max-width:300px">
+  <input type="text" placeholder="Search.." name="search2">
+  <button type="submit"><i class="fa fa-search"></i></button>
+</form>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+            
+    <div class="login">
+        <a href="#"><i class="fa fa-fw fa-user" button onclick="document.getElementById('id01').style.display='block'"></i></a></button>
+            
+     
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="../Media/unnamed.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+</div>
+        
+
+            
+            
+<script>        
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+          </a>
+    </div>
+    
+            <!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img src="../Media/179359_1140x366.jpg" style="width:100%">
+    <div class="text">Caption Text</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="../Media/202645_1140x366.png" style="width:100%">
+    <div class="text">Caption Two</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="../Media/180965_1140x366.jpg" style="width:100%">
+    <div class="text">Caption Three</div>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+    
+
+
+
+<script>
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+      </script>
+    
+    <script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+    <script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 15000); // Change image every 10 seconds
+}
+</script>
+ 
+<div class="row">
+    <div class="column">
+    <div class="card">
+  <img src="../Media/119318_200x200.jpg" alt="Manga" style="width:100%">
+  <h1>ToLoveRu</h1>
+  <p class="price">$79.99</p>
+  <p>Esta es la historia de Ru un chico..</p>
+  <p><button>Comprar</button></p>
+</div>
+    </div>
+  <div class="column">
+    <div class="card">
+  <img src="../Media/DSlayer.jpg" alt="Manga" style="width:100%">
+  <h1>DemonSlayer</h1>
+  <p class="price">$79.99</p>
+  <p>Comienza la aventura de Tanjiro..</p>
+  <p><button>Comprar</button></p>
+</div>
+    </div>
+  <div class="column">
+    <div class="card">
+  <img src="../Media/Erased.jpg" alt="Manga" style="width:100%">
+  <h1>Erased     
+      #1</h1>
+  <p class="price">$79.99</p>
+  <p>En un pueblo aparentemente normal..</p>
+  <p><button>Comprar</button></p>
+</div>
+    </div>
+  <div class="column">
+    <div class="card">
+  <img src="../Media/194989_200x200.jpg" alt="Manga" style="width:100%">
+  <h1> Dr.Stone #1</h1>
+  <p class="price">$79.99</p>
+  <p>Un dia en la tierr sucedio algo extra..</p>
+  <p><button>Comprar</button></p>
+</div>
+    </div>
+    <footer>
+        <div align="center">
+        <img src="../Media/Ejemplo-pie-ensalza-1024x261.jpg">
+        </div>
+    
+        
+    </footer>
+
+
+</body>
+</html>
